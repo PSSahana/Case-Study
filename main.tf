@@ -42,7 +42,7 @@ module "ec2-app-v1" {
 
   #ec2-subnets-ids = ["${module.Govtech-vpc.private-subnet-ids}"]
   
-  user-data = "${file("./modules/ec2/nginx.sh")}"
+  user-data = "${file("./modules/EC2/nginx.sh")}"
 
 
 }
