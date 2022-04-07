@@ -1,0 +1,14 @@
+apiVesrion: apps/v1
+kind: Deployment
+metadata:
+ name: nginx-deployment
+ labels:
+  author: sahana
+  type: proxyserver
+spec:
+ containers:
+  - name: Naginx webserver
+    image: naginxdemos/hello 
+    ports:
+    - containerPort: 80
+      hostPort: 9999
