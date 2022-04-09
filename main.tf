@@ -111,7 +111,7 @@ module "alb" {
   internal = "false"
   alb-sg = "${module.Govtech-ec2-sg.ec2-sg-security-group}"
   alb-subnets = ["${module.vpc.public-subnet-ids}"][0]
-  alb-tag = "Govtech-alb"
+  alb-tag = "Symbiosis-alb"
   
 
   #Target Groups

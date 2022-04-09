@@ -5,7 +5,7 @@ resource "aws_lb" "alb" {
   security_groups    = ["${var.alb-sg}"]
   subnets         = ["${var.alb-subnets}"][0]
 
-  enable_deletion_protection = "true"
+  
 
 
   tags = {
