@@ -129,8 +129,8 @@ module "auto-scaling" {
   region = "ap-southeast-1"
 
   #SSH Keys Genration
-  key-name = "test"
-  public-key-file-name = "${file("./modules/asg/test.pub")}"
+  #key-name = "test"
+  #public-key-file-name = "${file("./modules/asg/test.pub")}"
 
   #Launch Configuration
 
