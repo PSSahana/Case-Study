@@ -236,5 +236,5 @@ module "Govtech-ec2-sg" {
   outbound-rule-1-to-port = 0
   outbound-rule-1-cidr_blocks = "0.0.0.0/0"
 
-  #NOTE: ONLY ALL PORTS WILL BE "" & CIDR BLOCK WILL IN COMMAS ""
+ 
 }
