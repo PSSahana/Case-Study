@@ -130,7 +130,7 @@ module "auto-scaling" {
 
   #SSH Keys Genration
   #key-name = "test"
-  #public-key-file-name = "${file("./modules/asg/test.pub")}"
+  public-key-file-name = "${file("./modules/asg/test.pub")}"
 
   #Launch Configuration
 
