@@ -32,13 +32,14 @@ module "ec2-app-v1" {
   key-name = "test"
   ami-id = "ami-0801a1e12f4a9ccc0"
   instance-type = "t2.micro"
-  number-of-ec2-instances-required = "1"
+  number-of-ec2-instances-required = "3"
   public-key-file-name = "${file("./modules/EC2/test.pub")}"
 
   associate-public-ip-address = "true"
 
   vpc-security-group-ids = "${module.Govtech-ec2-sg.ec2-sg-security-group}"
   ec2-subnets-ids = ["${module.vpc.public-subnet-ids}"][0]
+  instance-name-taq = "from-EC2"
 
   #ec2-subnets-ids = ["${module.Govtech-vpc.private-subnet-ids}"]
   
