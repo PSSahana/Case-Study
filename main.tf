@@ -131,6 +131,7 @@ module "auto-scaling" {
   #SSH Keys Genration
   #key-name = "test"
   public-key-file-name = "${file("./modules/asg/test.pub")}"
+  user-data = "${file("./modules/EC2/nginx.sh")}"
 
   #Launch Configuration
 
