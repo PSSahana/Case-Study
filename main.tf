@@ -146,10 +146,10 @@ module "auto-scaling" {
   #Auto-Scaling
 
   autoscaling-group-name = "test-asg"
-  max-size = "4"
+  max-size = "5"
   min-size = "1"
   health-check-grace-period = "300"
-  desired-capacity = "2"
+  desired-capacity = "3"
   force-delete = "true"
   #A list of subnet IDs to launch resources in
   vpc-zone-identifier = "${module.vpc.public-subnet-ids}"
