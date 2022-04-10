@@ -36,6 +36,10 @@ variable "launch-configuration-public-key-name" {
 variable "autoscaling-group-name" {
   default = ""
 }
+variable "user-data" {
+  default = ""
+}
+
 
 variable "max-size" {
   default = ""

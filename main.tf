@@ -131,7 +131,7 @@ module "auto-scaling" {
   #SSH Keys Genration
   #key-name = "test"
   public-key-file-name = "${file("./modules/asg/test.pub")}"
-  user-data = "${file("./modules/EC2/nginx.sh")}"
+  
 
   #Launch Configuration
 
@@ -140,6 +140,7 @@ module "auto-scaling" {
   instance-type = "t2.micro"
   launch-configuration-security-groups = "${module.Govtech-ec2-sg.ec2-sg-security-group}"
   launch-configuration-public-key-name = "test"
+  user-data = "${file("./modules/EC2/nginx.sh")}"
 
   #Auto-Scaling
 

@@ -15,6 +15,7 @@ resource "aws_launch_configuration" "launch-configuration" {
   security_groups = ["${var.launch-configuration-security-groups}"]
   #Public keyname already attached in AWS Console
   key_name = "${var.launch-configuration-public-key-name}"
+  user_data = var.user-data
 }
 
 resource "aws_autoscaling_group" "autoscaling-group" {
