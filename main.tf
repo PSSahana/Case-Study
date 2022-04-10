@@ -26,13 +26,14 @@ module "rds-mysql-app1" {
   name-aws-db-subnet-group = "Govtech-rds-subnets-groups"
 }
 
+
 module "ec2-app-v1" {
   source = "./modules/EC2"
   region = "ap-southeast-1"
   key-name = "test"
   ami-id = "ami-0801a1e12f4a9ccc0"
   instance-type = "t2.micro"
-  number-of-ec2-instances-required = "1"
+  number-of-ec2-instances-required = "0"
   public-key-file-name = "${file("./modules/EC2/test.pub")}"
 
   associate-public-ip-address = "true"
@@ -50,7 +51,7 @@ module "ec2-app-v1" {
 module "rds-sg" {
   source = "./modules/rds-sg"
 
-  region = "eu-west-1"
+  region = "ap-southeast-1"
   aws-security-group-name = "db_sec_grp"
   vpc-id = "${module.vpc.vpc-id}"
   aws-security-group-tag-name = "govtech-sg-rds"
@@ -194,7 +195,7 @@ module "auto-scaling" {
 
 module "Govtech-ec2-sg" {
   source = "./modules/ec2_sg"
-  region = "eu-west-2"
+  region = "ap-southeast-1"
   vpc-id = module.vpc.vpc-id
   ec2-sg-name = "ec2-sg"
 
