@@ -32,7 +32,7 @@ module "ec2-app-v1" {
   key-name = "test"
   ami-id = "ami-0801a1e12f4a9ccc0"
   instance-type = "t2.micro"
-  number-of-ec2-instances-required = "3"
+  number-of-ec2-instances-required = "1"
   public-key-file-name = "${file("./modules/EC2/test.pub")}"
 
   associate-public-ip-address = "true"
